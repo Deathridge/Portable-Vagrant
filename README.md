@@ -63,7 +63,7 @@ In order to set up flask, follow these steps:
 4. execute `python /vagrant/app/app.py` inside the vagrant box  
 5. check out [http://localhost:5000](http://localhost:5000)  
 
-### [Python/Django]
+### [Python/Django](http://djangoproject.com)
 In order to set up flask, follow these steps:  
 1. Edit the `$project` variable in the `puppet\manifests\init.pp` file, setting it to `django`  
 2. execute `vagrant up`  
