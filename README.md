@@ -1,15 +1,15 @@
-# Portable Vagrant Box
+cd # Portable Vagrant Box
 
 Need a way to set up a development environment really easily? Here's one!
 
 ### Usage  
 1. Install [Virtual Box](https://www.virtualbox.org/wiki/Downloads) and [Vagrant](http://www.vagrantup.com/downloads.html)  
 2. Make a project directory and `cd` into it  
-3. execute `git clone git@github.com:calebdre/Portable-Vagrant.git ./`  
+3. execute `git clone git@github.com:Deathridge/Portable-Vagrant.git ./`  
 4. choose one of the configurations specified at the bottom  
 5. execute `vagrant up`  
 6. Check out *[localhost:5000](http://localhost:5000)*  
-7. Start hacking away in the app folder  
+7. update the app folder as you see fit 
 
 ##### This box includes the following:
 
@@ -62,3 +62,12 @@ In order to set up flask, follow these steps:
 3. ssh into the vagrant box (execute `vagrant ssh`)  
 4. execute `python /vagrant/app/app.py` inside the vagrant box  
 5. check out [http://localhost:5000](http://localhost:5000)  
+
+### [Python/Django]
+In order to set up flask, follow these steps:  
+1. Edit the `$project` variable in the `puppet\manifests\init.pp` file, setting it to `django`  
+2. execute `vagrant up`  
+3. ssh into the vagrant box (execute `vagrant ssh`)
+4. django-admin.py startproject --template https://github.com/Deathridge/vagrant-django-template/zipball/master --name=Vagrantfile myproject	  
+5. execute `python ./manage.py runserver 0.0.0.0:8000` inside the vagrant box  
+6. check out [http://localhost:8000](http://localhost:8000)  

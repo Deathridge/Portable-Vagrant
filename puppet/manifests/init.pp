@@ -47,7 +47,8 @@ file { '/var/www/app':
 #############
 ### Choose a type of project (laravel)
 #############
-$project = "wordpress"
+$project = "django"
+$projectname = "testproject"
 ############
 ###########
 include nginx, mysql# ruby, nodejs
@@ -71,4 +72,8 @@ if $project == "flask"{
 if $project == "wordpress"{
 	include php55
 	include wordpress
+}
+
+if $project == "django" {
+	include django
 }
